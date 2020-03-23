@@ -26,7 +26,7 @@ function game(userChoice) {
     function whenWin(user, computer) {
         userScore++;
         userScore_span.innerHTML= userScore;
-        result_div.innerHTML = `${converToEng(user)} poops on${converToEng(computer)}, YOU WINN!`;
+        result_div.innerHTML = `${converToEng(user)} wins to${converToEng(computer)}, YOU WINN!`;
         document.getElementById(userChoice).classList.add('green-glow');
         setTimeout(function() {
             document.getElementById(userChoice).classList.remove('green-glow');
@@ -36,7 +36,7 @@ function game(userChoice) {
     function whenLose(u,c) {
        computerScore++;
        computerScore_span.innerHTML = computerScore;
-       result_div.innerHTML = `${converToEng(c)} poops on${converToEng(u)}, POOPY`;
+       result_div.innerHTML = `${converToEng(c)} loses to${converToEng(u)}, LOSER`;
        document.getElementById(userChoice).classList.add('red-glow');
        setTimeout(function() {
         document.getElementById(userChoice).classList.remove('red-glow');
